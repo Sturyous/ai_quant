@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>量化交易基础 - 数据获取报告</title>
+    <style>
+        body { font-family: '微软雅黑', sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        .info-box { background-color: #eef2f5; padding: 15px; border-left: 4px solid #0056b3; margin-bottom: 20px; }
+        img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px; }
+        .footer { margin-top: 40px; text-align: center; color: #777; font-size: 14px; border-top: 1px solid #eee; padding-top: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>量化交易作业：获取与可视化交易数据</h1>
+        
+        <div class="info-box">
+            <p><strong>股票名称：</strong>贵州茅台 (600519)</p>
+            <p><strong>数据时间段：</strong>2025-07-04 至 2026-07-03</p>
+            <p><strong>交易日天数：</strong>共 242 天</p>
+            <p><strong>复权方式：</strong>后复权 (hfq)</p>
+        </div>
+
+        <h2>1. 每日收盘价曲线图</h2>
+        <p>以下是通过 Python 绘制的过去一年收盘价走势图：</p>
+        <img src="close_price_chart.png" alt="收盘价走势图">
+
+        <h2>2. 数据存储说明</h2>
+        <p>数据已成功利用 <code>akshare</code> 的 <code>stock_zh_a_daily</code> 接口获取，并完整保存至 <strong><a href="600519_history_data.csv">600519_history_data.csv</a></strong> 文件中。提取的字段包括：</p>
+        <table>
+            <tr>
+                <th>date (交易日)</th>
+                <th>open (开盘价)</th>
+                <th>high (最高价)</th>
+                <th>low (最低价)</th>
+                <th>close (收盘价)</th>
+                <th>volume (成交量)</th>
+            </tr>
+            <tr>
+                <td>包含</td>
+                <td>包含</td>
+                <td>包含</td>
+                <td>包含</td>
+                <td>包含</td>
+                <td>包含</td>
+            </tr>
+        </table>
+        
+        <div class="footer">
+            <p>作业提交至 GitHub: <a href="https://github.com/Sturyous/ai_quant.git">Sturyous/ai_quant</a></p>
+        </div>
+    </div>
+</body>
+</html>
